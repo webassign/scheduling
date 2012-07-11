@@ -99,6 +99,26 @@ $(function(){
     }
   });
 
+  var WeekCollection = Backbone.Collection.extend({
+    model: Week,
+
+    comparator: function(week) {
+      return week.get('number');
+    }
+  })
+
+  // Views
+  var WeekView = Backbone.View.extend({
+    template: HandleBars.compile('<div>{{#each week}}<div><span class="week_num">{{{number}}}</span><span class="first_day">{{{start}}}</span></div>{{/each}}</div>'),
+    
+    initialize: function() {},
+
+    render: function() {
+      this.$el.html(template(this.model.toJSON()));
+      return this;
+    }
+  });
+
   // Todo Item View
   // --------------
 
