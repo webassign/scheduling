@@ -1,0 +1,69 @@
+{
+	"course_id": 1,
+	"assignment": {
+		"name": "foo",
+		"id": 1,
+		"restrictions": true,
+		"category": "homework"
+	},
+	"week": 3,
+	"rule": {
+		"due": {
+			"relative_to": "",
+			"quantity": 3,
+			"units": "",
+			"time": 234
+		},
+		"first": {
+			"relative_to": "",
+			"quantity": 3,
+			"units": "",
+			"time": 234
+		},
+		"last": {
+			"relative_to": "",
+			"quantity": 3,
+			"units": "",
+			"time": 234
+		}
+	},
+	"sections": [
+		{
+			"name": "foo",
+			"scheduled": true,
+			"derived_dates": {
+				"due": 123,
+				"first": 345,
+				"last": 678
+			},
+			"rule": {
+				"due": {
+					"relative_to": "",
+					"quantity": 3,
+					"units": "",
+					"time": 234
+				},
+				"first": {
+					"relative_to": "",
+					"quantity": 3,
+					"units": "",
+					"time": 234
+				},
+				"last": {
+					"relative_to": "",
+					"quantity": 3,
+					"units": "",
+					"time": 234
+				},
+				"meet_day":4
+			},
+			"meet_days": "0101010",
+			"meet_time": 123,
+			"restrictions": true
+		},
+		{
+			"name": "bar",
+			"scheduled": false
+		}
+	]
+}
