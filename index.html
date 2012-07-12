@@ -4,39 +4,7 @@
 			background-color: blue;
 		}
 	</style>
-	<script type="text/javascript" src="lib/require.js"></script>
-	<script type="text/javascript">
-		require.config({
-			paths: {
-				jQuery:     'lib/jquery-1.7.2',
-				Underscore: 'lib/underscore',
-				Backbone:   'lib/backbone',
-				Handlebars: 'lib/handlebars',
-				moment:     'lib/moment',
-				model:      'model',
-				view:       'view'
-			},
-			shim: {
-				'Backbone': {
-					deps:    ['Underscore', 'jQuery'],
-					exports: 'Backbone'
-				},
-				'Handlebars': {
-					exports: 'Handlebars'
-				},
-				'jQuery': {
-					exports: '$'
-				},
-				'Underscore': {
-					exports: '_'
-				}
-			}
-		});
-
-		require([
-			'scheduling'
-		], function(App){});
-	</script>
+	<script data-main="main" type="text/javascript" src="lib/require.js"></script>
 </head>
 <body>
 	<div id="assignment_finder"></div>
