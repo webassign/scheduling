@@ -1,6 +1,7 @@
 define([
+    'jQuery'
 ],
-function() {
+function($) {
     function on(events, selector, data, handler){
         return dispatcher.on(events, selector, data, handler);
     }
@@ -17,4 +18,4 @@ function() {
     var dispatcher = $({});
 
     return EventManager;
-})();
+});

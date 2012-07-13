@@ -1,0 +1,10 @@
+<div class="week_display">
+	<span class="week_num">{{{current_week.number}}}</span>
+	<span class="week_duration">
+	{{#if current_week.same_month}}
+		{{{current_week.start_month}}} {{{current_week.start_day}}} - {{{current_week.end_day}}}
+	{{else}}
+		{{{current_week.start_month}}} {{{current_week.start_day}}} - {{{current_week.end_month}}} {{{current_week.end_day}}}
+	{{/if}}
+	</span>
+</div>
