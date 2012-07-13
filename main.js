@@ -1,12 +1,14 @@
 require.config({
 	paths: {
+		text:       'lib/text',
 		jQuery:     'lib/jquery-1.7.2',
 		Underscore: 'lib/underscore',
 		Backbone:   'lib/backbone',
 		Handlebars: 'lib/handlebars',
 		moment:     'lib/moment',
 		model:      'model',
-		view:       'view'
+		view:       'view',
+		templates:  'templates'
 	},
 	shim: {
 		'Backbone': {

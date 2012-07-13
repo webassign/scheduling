@@ -4,11 +4,12 @@ define([
 	'Backbone',
 	'Handlebars',
 	'moment',
-	'model/Week'
-], function($, _, Backbone, Handlebars, moment, Week) {
+	'model/Week',
+	'text!templates/week.html'
+], function($, _, Backbone, Handlebars, moment, Week, template) {
 	return WeekView = Backbone.View.extend({
 
-		template: Handlebars.compile('<div>{{#each weeks}}<div class="week" data-week_num="{{{number}}}"><span class="week_num">{{{number}}}</span><span class="first_day">{{{first_day}}}</span></div>{{/each}}</div>'),
+		template: Handlebars.compile(template),
 		events: {
 			'click .week': 'changeWeek'
 		},
@@ -32,8 +33,8 @@ define([
 		},
 
 		changeWeek: function (event) {
-			var number = $(event.currentTarget).data('week_num');
-			this.$el.find('[data-week_num="'+number+'"]').addClass('selected');
+			var number = $(event.currentTarget).data('week-num');
+			this.$el.find('[data-week-num="'+number+'"]').addClass('selected');
 			console.log(number);
 		}
 	});
