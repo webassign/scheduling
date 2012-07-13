@@ -1,4 +1,5 @@
 require.config({
+	baseUrl: 'js',
 	paths: {
 		text:       'lib/text',
 		jQuery:     'lib/jquery-1.7.2',
@@ -8,7 +9,7 @@ require.config({
 		moment:     'lib/moment',
 		model:      'model',
 		view:       'view',
-		templates:  'templates'
+		templates:  '../templates'
 	},
 	shim: {
 		'Backbone': {
